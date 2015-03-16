@@ -1,0 +1,43 @@
+﻿@model mvc_EF_访问数据.Models.StudentInfo
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>StudentInfo</legend>
+
+    <div class="display-label">StuNO</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.StuNO)
+    </div>
+
+    <div class="display-label">StuName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.StuName)
+    </div>
+
+    <div class="display-label">StuPhoto</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.StuPhoto)
+    </div>
+
+    <div class="display-label">StuBirthday</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.StuBirthday)
+    </div>
+
+    <div class="display-label">StuAddress</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.StuAddress)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

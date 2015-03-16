@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "cookieTest";
+    var cookieCont = Request.Cookies.Count;
+}
+
+<h2>@ViewBag.Title</h2><br />
+<p>@ViewBag.c1</p><br />
+@for (int i = 0; i < cookieCont; i++) {
+    var cookie = Request.Cookies[i];
+    @: @cookie.Name   @cookie.Value<br />
+}

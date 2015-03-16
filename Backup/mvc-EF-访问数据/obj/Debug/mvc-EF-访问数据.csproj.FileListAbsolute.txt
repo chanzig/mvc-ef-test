@@ -1,0 +1,1 @@
+C:\Users\Chao.Fu\Documents\Visual Studio 2012\Projects\mvc-EF-访问数据\Backup\mvc-EF-访问数据\obj\Debug\mvc-EF-访问数据.csprojResolveAssemblyReference.cache

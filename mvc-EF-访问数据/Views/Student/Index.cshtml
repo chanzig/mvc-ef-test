@@ -1,0 +1,98 @@
+﻿
+
+<style type="text/css">
+    .dataTables_wrapper {
+       padding-top:15px;
+     }
+    .dataTables_filter input[type="search"] {
+        padding-right:0px;
+     }
+    table#usertable {
+       margin-bottom:5px;
+     }
+
+    .mt10 {
+        margin-top:10px;
+     }
+</style>
+<div class="header col-md-12">
+    <h3 class="pull-left"><i class="glyphicon glyphicon-user"></i>用户管理</h3>
+    @Html.ActionLink("导出所有用户信息", "Export")
+</div>
+    <table id="usertable" class="display table table-hover" cellspacing="0" width="100%">
+    <thead>
+        <tr>
+            <th>学号</th>
+            <th>姓名</th>
+            <th>图片</th>
+            <th>生日</th>
+            <th>地址</th>
+            <th>操作</th>
+        </tr>
+    </thead>
+    </table>
+    <script>
+    $(function () {
+
+    $('#usertable').dataTable( {
+        "serverSide": true,
+        "Paginat":true,
+        "oLanguage": {
+            "sSearch": "搜索:",
+            "sLengthMenu": "每頁 _MENU_ 條記錄",
+            "sZeroRecords": "Nothing found - 沒有記錄",
+            "sInfo": "第  _START_ 條到第  _END_ 條記錄,一共  _TOTAL_ 條記錄",
+            "sInfoEmpty": "顯示0條記錄",
+            "oPaginate": {
+                "sPrevious": " 上一頁 ",
+                "sNext": " 下一頁",
+            }
+        },
+        "language": {
+            "lengthMenu": 'Display <select>' +
+              '<option value="5">5</option>' +
+              '<option value="10">10</option>' +
+              '<option value="15">15</option>' +
+             '<option value="40">40</option>' +
+              '<option value="50">50</option>' +
+              '<option value="-1">All</option>' +
+              '</select> records',
+            "zeroRecords": "No records to display",//无数据时候显示
+        },
+        "searching": false,
+        "ajax": {
+            "url": "Student/GetUsers",
+            "dataSrc": function (json) {
+                var data = json.data;
+                for (var i = 0, ien = data.length ; i < ien ; i++) {
+                    data[i].ID = "<a href=\"/Student/Edit/" + data[i].ID + " \">Edit</a>| <a href=\"/Student/Details/" + data[i].ID + " \">Details</a>|<a href=\"/Student/Delete/" + data[i].ID + " \">Delete</a>";
+                }
+                return data;
+            }
+        },
+        "columns": [
+         { data: 'StuNO' },
+         { data: 'StuName' },
+         { data: 'StuPhoto' },
+         { data: 'StuBirthday' },
+         { data: 'StuAddress' },
+         { data: 'ID'}
+        ]
+    });
+    $('#usertable_length').after('<div class="navbar-right"><form class="navbar-form navbar-right" role="search">' +
+           '<div class="form-group"><input type="text" id="search_value" placeholder="输入关键字" class="form-control"></div>' +
+           '<button type="button" class="btn btn-default" id="search_btn">搜索</button></form></div>');
+
+    $('#search_btn').on('click', function () {
+        // get the draw
+        dataTable.draw();
+        // or reload datatable
+        // dataTable.ajax.reload();
+    });
+
+    $('.dataTables_filter input[type="search"]').addClass('form-control');
+    $('.dataTables_length select[name="usertable_length"]').addClass('form-control');
+    $('.dataTables_length label').addClass('form-inline');
+    $('.dataTables_filter label').addClass('form-inline');
+});
+    </script>

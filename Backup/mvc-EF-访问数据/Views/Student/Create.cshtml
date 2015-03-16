@@ -1,0 +1,65 @@
+﻿@model mvc_EF_访问数据.Models.StudentInfo
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>StudentInfo</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.StuNO)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.StuNO)
+            @Html.ValidationMessageFor(model => model.StuNO)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.StuName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.StuName)
+            @Html.ValidationMessageFor(model => model.StuName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.StuPhoto)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.StuPhoto)
+            @Html.ValidationMessageFor(model => model.StuPhoto)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.StuBirthday)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.StuBirthday)
+            @Html.ValidationMessageFor(model => model.StuBirthday)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.StuAddress)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.StuAddress)
+            @Html.ValidationMessageFor(model => model.StuAddress)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

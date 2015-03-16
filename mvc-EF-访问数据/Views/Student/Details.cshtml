@@ -1,0 +1,40 @@
+﻿@model mvc_EF_访问数据.Models.StudentInfo
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>StudentInfo</legend>
+
+    <div class="display-label">StuNO</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.StuNO)
+    </div>
+
+    <div class="display-label">StuName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.StuName)
+    </div>
+
+    <div class="display-label">StuPhoto</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.StuPhoto)
+    </div>
+
+    <div class="display-label">StuBirthday</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.StuBirthday)
+    </div>
+
+    <div class="display-label">StuAddress</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.StuAddress)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

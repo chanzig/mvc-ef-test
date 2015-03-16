@@ -1,0 +1,17 @@
+﻿
+
+@{
+    ViewBag.Title = "entityTest";
+}
+
+<h2>@ViewBag.Title</h2>
+<form action="entityTest" method="post">
+    MyEntity.id=  <input type="text" name="ID" />
+    MyEntity.name=  <input type="text" name="NAME" />
+      <input type="submit" value="submit" />
+</form>
+@if (ViewBag.entity!=null) {
+    var entity = ViewBag.entity as mvc_EF_访问数据.Models.MyEntity;
+
+    <p>输入如下：@entity.id , @entity.name </p>
+}

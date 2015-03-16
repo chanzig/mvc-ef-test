@@ -1,0 +1,64 @@
+﻿@model IEnumerable<mvc_EF_访问数据.models.studentinfo>
+
+
+    @{
+        ViewBag.Title = "Index";
+    }
+
+    <h2>Index</h2>
+    <div class="header col-md-12">
+        <h3 class="pull-left"><i class="glyphicon glyphicon-user"></i>用户管理</h3>
+        @Html.ActionLink("导出所有用户信息", "Export")
+    </div>
+    @Html.ActionLink("导出所有用户信息", "MM")
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table>
+        <tr>
+            <th>
+                StuNO
+            </th>
+            <th>
+                StuName
+            </th>
+            <th>
+                StuPhoto
+            </th>
+            <th>
+                StuBirthday
+            </th>
+            <th>
+                StuAddress
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StuNO)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StuName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StuPhoto)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StuBirthday)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StuAddress)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                </td>
+            </tr>
+        }
+
+    </table>
+

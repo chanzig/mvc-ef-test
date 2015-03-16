@@ -1,0 +1,12 @@
+﻿@{
+    ViewBag.Title = "FormTest";
+}
+
+<h2>@ViewBag.Title</h2>
+<form action="FormTest" method="post">
+    <input name="strinput" type="text" /><br />
+    <input type="submit" value="提交" />
+</form>
+@if(ViewBag.msg!=null ){
+    <p>您输入了： @ViewBag.msg</p>
+}
