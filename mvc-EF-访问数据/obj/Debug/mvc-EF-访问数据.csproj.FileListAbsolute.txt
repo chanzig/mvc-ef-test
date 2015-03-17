@@ -20,3 +20,25 @@ C:\Users\Chao.Fu\Documents\Visual Studio 2012\Projects\mvc-EF-访问数据\mvc-E
 C:\Users\Chao.Fu\Documents\Visual Studio 2012\Projects\mvc-EF-访问数据\mvc-EF-访问数据\bin\System.Web.WebPages.Razor.xml
 C:\Users\Chao.Fu\Documents\Visual Studio 2012\Projects\mvc-EF-访问数据\mvc-EF-访问数据\obj\Debug\mvc-EF-访问数据.dll
 C:\Users\Chao.Fu\Documents\Visual Studio 2012\Projects\mvc-EF-访问数据\mvc-EF-访问数据\obj\Debug\mvc-EF-访问数据.pdb
+C:\Users\Chao.Fu\Documents\mvc-ef-test-1\mvc-EF-访问数据\bin\mvc-EF-访问数据.dll.config
+C:\Users\Chao.Fu\Documents\mvc-ef-test-1\mvc-EF-访问数据\bin\mvc-EF-访问数据.dll
+C:\Users\Chao.Fu\Documents\mvc-ef-test-1\mvc-EF-访问数据\bin\mvc-EF-访问数据.pdb
+C:\Users\Chao.Fu\Documents\mvc-ef-test-1\mvc-EF-访问数据\bin\EntityFramework.dll
+C:\Users\Chao.Fu\Documents\mvc-ef-test-1\mvc-EF-访问数据\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Chao.Fu\Documents\mvc-ef-test-1\mvc-EF-访问数据\bin\System.Web.Helpers.dll
+C:\Users\Chao.Fu\Documents\mvc-ef-test-1\mvc-EF-访问数据\bin\System.Web.Mvc.dll
+C:\Users\Chao.Fu\Documents\mvc-ef-test-1\mvc-EF-访问数据\bin\System.Web.Providers.dll
+C:\Users\Chao.Fu\Documents\mvc-ef-test-1\mvc-EF-访问数据\bin\System.Web.Razor.dll
+C:\Users\Chao.Fu\Documents\mvc-ef-test-1\mvc-EF-访问数据\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Chao.Fu\Documents\mvc-ef-test-1\mvc-EF-访问数据\bin\System.Web.WebPages.dll
+C:\Users\Chao.Fu\Documents\mvc-ef-test-1\mvc-EF-访问数据\bin\System.Web.WebPages.Razor.dll
+C:\Users\Chao.Fu\Documents\mvc-ef-test-1\mvc-EF-访问数据\bin\EntityFramework.xml
+C:\Users\Chao.Fu\Documents\mvc-ef-test-1\mvc-EF-访问数据\bin\System.Web.Helpers.xml
+C:\Users\Chao.Fu\Documents\mvc-ef-test-1\mvc-EF-访问数据\bin\System.Web.Mvc.xml
+C:\Users\Chao.Fu\Documents\mvc-ef-test-1\mvc-EF-访问数据\bin\System.Web.Razor.xml
+C:\Users\Chao.Fu\Documents\mvc-ef-test-1\mvc-EF-访问数据\bin\System.Web.WebPages.xml
+C:\Users\Chao.Fu\Documents\mvc-ef-test-1\mvc-EF-访问数据\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Chao.Fu\Documents\mvc-ef-test-1\mvc-EF-访问数据\bin\System.Web.WebPages.Razor.xml
+C:\Users\Chao.Fu\Documents\mvc-ef-test-1\mvc-EF-访问数据\obj\Debug\mvc-EF-访问数据.csprojResolveAssemblyReference.cache
+C:\Users\Chao.Fu\Documents\mvc-ef-test-1\mvc-EF-访问数据\obj\Debug\mvc-EF-访问数据.dll
+C:\Users\Chao.Fu\Documents\mvc-ef-test-1\mvc-EF-访问数据\obj\Debug\mvc-EF-访问数据.pdb

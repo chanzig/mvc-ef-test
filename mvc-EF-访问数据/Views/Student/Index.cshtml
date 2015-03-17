@@ -48,20 +48,12 @@
                 "sNext": " 下一頁",
             }
         },
-        "language": {
-            "lengthMenu": 'Display <select>' +
-              '<option value="5">5</option>' +
-              '<option value="10">10</option>' +
-              '<option value="15">15</option>' +
-             '<option value="40">40</option>' +
-              '<option value="50">50</option>' +
-              '<option value="-1">All</option>' +
-              '</select> records',
-            "zeroRecords": "No records to display",//无数据时候显示
-        },
         "searching": false,
         "ajax": {
             "url": "Student/GetUsers",
+            "data":function(d){
+                d.searchTxt=$('#search_value').val();
+            },
             "dataSrc": function (json) {
                 var data = json.data;
                 for (var i = 0, ien = data.length ; i < ien ; i++) {
