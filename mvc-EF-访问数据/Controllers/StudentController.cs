@@ -17,7 +17,6 @@ namespace mvc_EF_访问数据.Controllers
     public class StudentController : Controller
     {
         private StuDBContest db = new StuDBContest();
-
         //
         // GET: /Student/
 
@@ -276,6 +275,10 @@ namespace mvc_EF_访问数据.Controllers
             stream.Write(bom, 0, bom.Length);
             stream.Write(bytes, 0, bytes.Length);
         }
-        
+
+        public ActionResult MeetingManage() 
+        {
+            return View();
+        }
     }
 }
