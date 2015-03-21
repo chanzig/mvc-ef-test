@@ -13,48 +13,60 @@
             <div class="modal-header">
                 <h4 class="modal-title"> 添加会议</h4>
             </div>
-            <div class="modal-body" id="MeetingBodyForm">
-                <div>
-                    <div class="form-group form-section">
-                        <label for="MeetingTitle" class="pull-left">1("主题：")</label>
-                        @Html.TextBox("MeetingTitle", "", new { @id = "MeetingTitle", @class = "form-text form-control" })
-                        @Html.ValidationMessage("MeetingTitle")
-                    </div>
-                    <div class="form-group form-section">
-                        <label for="MeetingSpeaker" class="pull-left">1("讲者：")</label>
-                        @Html.TextBox("MeetingSpeaker", "", new { @id = "MeetingSpeaker", @class = "form-text form-control" })
-                        @Html.ValidationMessage("MeetingSpeaker")
-                    </div>
-                    <div class="form-group form-section">
-                        <label for="MeetingTime" class="pull-left">1("时间：")</label>
-                        @Html.TextBox("Email", "", new { @id = "MeetingTime", @class = "form-text form-control" })
-                        @Html.ValidationMessage("MeetingTime")
-                    </div>
-                    <div class="form-group form-section">
-                        <label for="MeetingDescription" class="pull-left">1("介绍：")</label>
-                        @Html.TextBox("MeetingDescription", "", new { @id = "MeetingDescription", @class = "form-text form-control" })
-                        @Html.ValidationMessage("MeetingDescription")
-                    </div>
-                    <div class="form-group form-section">
-                        <label for="MeetingLink" class="pull-left">1("链接：")</label>
-                        @Html.TextBox("MeetingLink", "", new { @id = "MeetingLink", @class = "form-text form-control" })
-                        @Html.ValidationMessage("MeetingLink")
+            <form id="MeetingBodyForm">
+                <div class="modal-body">
+
+
+                    <div>
+                        <div class="form-group form-section">
+                            <label for="MeetingTitle" class="pull-left">1("主题：")</label>
+                            @Html.TextBox("MeetingTitle", "", new { @id = "MeetingTitle", @class = "form-text form-control" })
+                            @Html.ValidationMessage("MeetingTitle")
+                        </div>
+                        <div class="form-group form-section">
+                            <label for="MeetingSpeaker" class="pull-left">1("讲者：")</label>
+                            @Html.TextBox("MeetingSpeaker", "", new { @id = "MeetingSpeaker", @class = "form-text form-control" })
+                            @Html.ValidationMessage("MeetingSpeaker")
+                        </div>
+                        <div class="form-group form-section">
+                            <label for="MeetingTime" class="pull-left">1("时间：")</label>
+                            @Html.TextBox("MeetingTime", "", new { @id = "MeetingTime", @class = "form-text form-control" })
+                            <span class="add-on"><i class="icon-th"></i></span>
+                            @Html.ValidationMessage("MeetingTime")
+                        </div>
+                        <div class="form-group form-section">
+                            <label for="MeetingDescription" class="pull-left">1("介绍：")</label>
+                            @Html.TextBox("MeetingDescription", "", new { @id = "MeetingDescription", @class = "form-text form-control" })
+                            @Html.ValidationMessage("MeetingDescription")
+                        </div>
+                        <div class="form-group form-section">
+                            <label for="MeetingLink" class="pull-left">1("链接：")</label>
+                            @Html.TextBox("MeetingLink", "", new { @id = "MeetingLink", @class = "form-text form-control" })
+                            @Html.ValidationMessage("MeetingLink")
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                <button id="btnInsert" type="button" class="btn btn-primary">確定生成</button>
-            </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button id="btnInsert" type="submit" class="btn btn-primary">確定生成</button>
+                </div>
+            </form> 
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
-</div>
+</div><!-- /.modal -->
 
 <script type="text/javascript">
     $(function () {
         $("#addMeetingModal").bind("click", function () {
             $('#MeetingModal').modal('toggle');
         })
+        $("#MeetingTime").datetimepicker({
+            format: "dd MM yyyy - hh:ii",
+            autoclose: true,
+            todayBtn: true,
+            pickerPosition: "bottom-left"
+        });
         $('#MeetingBodyForm').bootstrapValidator({
             feedbackIcons: {
                 valid: 'glyphicon glyphicon-ok',
